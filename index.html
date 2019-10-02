@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<head>
+    <title>temperature converter</title>
+    <h1 style="text-align: center">Temperature Converter</h1>
+    <style>
+        #box {
+            width: 100px;
+            height: 30px;
+            border-style: solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="celc">
+    <button type="button" onclick="getValue()">Convert</button>
+    <div id="box"></div>
+
+    <script>
+
+        function getValue() {
+            var num = document.getElementById("celc").value;
+            celcius = (Number(num) * 1.8) + 32;
+            document.getElementById("box").innerHTML = celcius;
+        }
+    </script>
+
+</body>
