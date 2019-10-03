@@ -47,3 +47,11 @@ pre {
     justify-content: center;
     align-items: center;
 }
+
+p {
+    text-align: center;
+}
+
+em {
+    text-align: center;
+}
