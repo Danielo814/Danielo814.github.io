@@ -3,13 +3,11 @@ function getInput() {
 }
 
 function toFahrenheit(input) {
-    var celcius = ((parseInt(input, 10) - 32) *  (5 / 9)).toFixed(2) + "&#8451";
-    return celcius;
+    return ((parseInt(input, 10) - 32) *  (5 / 9)).toFixed(2) + "&#8451";
 }
 
 function toCelcius(input) {
-    var farenheit = ((parseInt(input, 10) * 1.8) + 32).toFixed(2) + "&#8457";
-    return farenheit;
+    return ((parseInt(input, 10) * 1.8) + 32).toFixed(2) + "&#8457";
 }
 
 function isFahrenheit(input) {
