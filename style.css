@@ -4,6 +4,7 @@
     border-style: solid;
     text-align: center;
     margin-left: 40px;
+    overflow: scroll;
 }
 
 body {
