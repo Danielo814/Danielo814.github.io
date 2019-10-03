@@ -1,4 +1,4 @@
-#box {
+#output {
     width: 100px;
     height: 30px;
     border-style: solid;
@@ -33,7 +33,7 @@ pre {
     padding: 1em;
 }
 
-#celc {
+#input {
     width: 100px;
     height: 30px;
     margin-right: 5px;
@@ -41,7 +41,7 @@ pre {
     text-align: center;
 }
 
-.ctof {
+.fields {
     display: flex;
     flex-direction: row;
     justify-content: center;
