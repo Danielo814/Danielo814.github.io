@@ -1,2 +1,31 @@
 <!DOCTYPE HTML>
-<p>hi it worked</p>
+<head>
+    <title>temperature converter</title>
+    <h1 style="text-align: center">Temperature Converter</h1>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- <style>
+        #box {
+            width: 100px;
+            height: 30px;
+            border-style: solid;
+            text-align: center;
+        }
+    </style> -->
+</head>
+<body>
+        <p style="text-align: center">Enter degrees in Celcius to be converted to Fahrenheit:</p>
+    <div class="ctof">
+        <input id="celc">
+        <button type="button" onclick="getValue()">Convert</button>
+        <div id="box"></div>
+    </div>
+    <script>
+
+        function getValue() {
+            var num = document.getElementById("celc").value;
+            celcius = (parseInt(num, 10) * 1.8) + 32;
+            document.getElementById("box").innerHTML = celcius + "&#8457";
+        }
+    </script>
+
+</body>
