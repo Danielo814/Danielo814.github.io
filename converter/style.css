@@ -1,11 +1,10 @@
-#box {
+#output {
     width: 100px;
     height: 30px;
     border-style: solid;
     border-width: thin;
     text-align: center;
     margin-left: 40px;
-    overflow: scroll;
 }
 
 body {
@@ -19,6 +18,7 @@ body {
 
 h1, h2, strong {
     color: #333;
+    text-align: center;
 }
 
 code, pre {
@@ -34,7 +34,7 @@ pre {
     padding: 1em;
 }
 
-#celc {
+#input {
     width: 100px;
     height: 30px;
     margin-right: 5px;
@@ -42,7 +42,7 @@ pre {
     text-align: center;
 }
 
-.ctof {
+.fields {
     display: flex;
     flex-direction: row;
     justify-content: center;
