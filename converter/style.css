@@ -2,8 +2,10 @@
     width: 100px;
     height: 30px;
     border-style: solid;
+    border-width: thin;
     text-align: center;
     margin-left: 40px;
+    overflow: scroll;
 }
 
 body {
@@ -45,4 +47,8 @@ pre {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+p {
+    text-align: center;
 }
