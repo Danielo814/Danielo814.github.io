@@ -1,31 +1,18 @@
 <!DOCTYPE HTML>
 <head>
     <title>temperature converter</title>
-    <h1 style="text-align: center">Temperature Converter</h1>
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <!-- <style>
-        #box {
-            width: 100px;
-            height: 30px;
-            border-style: solid;
-            text-align: center;
-        }
-    </style> -->
+    <!-- <script src="script.js"></script> -->
 </head>
 <body>
-        <p style="text-align: center">Enter degrees in Celcius to be converted to Fahrenheit:</p>
-    <div class="ctof">
-        <input id="celc">
-        <button type="button" onclick="getValue()">Convert</button>
-        <div id="box"></div>
+    <h1>Temperature Converter</h1>
+    <p>Enter the temperature you would like to be converted in the box to the left:</p>
+    <p><em>Example - 32c will convert number to temperature in fahrenheit</em></p>
+    <p><em>32f will convert number to temperature in celcius</em></p>
+    <div class="fields">
+        <input id="input" onkeyup="convert()">
+        <div id="output"></div>
     </div>
-    <script>
-
-        function getValue() {
-            var num = document.getElementById("celc").value;
-            celcius = (parseInt(num, 10) * 1.8) + 32;
-            document.getElementById("box").innerHTML = celcius + "&#8457";
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
+    
