@@ -1,3 +1,17 @@
 body {
     text-align: center;
 }
+
+.box {
+    width: 50px;
+    height: 50px;
+    border: 4px solid black;
+    display: inline-block;
+    font-weight: 800;
+    font-size: 25px;
+
+}
+
+.square-container {
+    text-align: center;
+}
