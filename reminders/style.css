@@ -3,9 +3,14 @@
     height: 150px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     margin: auto;
 }
 
-.list-items {
-    
+#list-items {
+    margin-left: 15px;
 }
+
+hr {
+    width: 100%;
+  }
