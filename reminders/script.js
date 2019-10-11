@@ -2,18 +2,11 @@ var toDoList = getToDos() || [];
 
 
 function createItem() {
-    // var input = document.getElementById("input").value;
-    // getInputValue();
-    // var newToDo = new Todo(input);
     var newToDo = addNewTodo();
-    // toDoList.push(newToDo);
     updateTodoList(newToDo);
     saveTodosLocally();
-    // var todo = document.getElementById("todo");
-    // todo.insertAdjacentHTML('beforeend', '<input type="checkbox"> ' + newToDo.text + '<br>');
     addToDoToHTML(newToDo);
-    console.log(toDoList[0].id);
-    console.log(newToDo.id);
+    console.log(toDoList);
    }
 
 class Todo {
@@ -25,7 +18,14 @@ class Todo {
 
 }
 
-
+function validate(btn) {
+    console.log(typeof(btn.id));
+    for (i = 0; i < toDoList.length; i++) {
+        if (toDoList[i].id === btn.id) {
+            toDoList[i].completed = true;
+        } 
+    }
+}
 function addNewTodo() {
     var input = getInputValue();
     var newToDo = new Todo(input);
@@ -54,7 +54,7 @@ function getToDos() {
 
 function addToDoToHTML(item) {
     var todoContainer = document.getElementById("todo");
-    todoContainer.insertAdjacentHTML('beforeend', '<p><input type="checkbox"> ' + item.text + '</p>');
+    todoContainer.insertAdjacentHTML('beforeend', '<p><input type="checkbox" class="box" onclick="validate(this)" id="' + item.id +  '"> ' + item.text + '</p>');
 }
 
 function loopThroughAllTodos() {
