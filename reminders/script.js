@@ -17,13 +17,21 @@ class Todo {
     }
 
 }
+// toDoList[i].id === btn.id && 
 
 function validate(btn) {
     console.log(typeof(btn.id));
     for (i = 0; i < toDoList.length; i++) {
-        if (toDoList[i].id === btn.id) {
+        if (toDoList[i].id === btn.id && btn.checked === true) {
             toDoList[i].completed = true;
-        } 
+            console.log("first loop")
+            console.log(btn.id);
+        } else {
+            toDoList[i].completed = false;
+            console.log("second loop")
+            console.log(btn.id);
+        }
+        console.log(toDoList);
     }
 }
 function addNewTodo() {
