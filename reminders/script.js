@@ -17,19 +17,16 @@ class Todo {
     }
 
 }
-// toDoList[i].id === btn.id && 
 
-function validate(btn) {
-    console.log(typeof(btn.id));
-    for (i = 0; i < toDoList.length; i++) {
-        if (toDoList[i].id === btn.id && btn.checked === true) {
+
+function checkIfCompleted(btn) {
+      for (i = 0; i < toDoList.length; i++) {
+        if (btn.id != toDoList[i].id) {
+            continue;
+        } else if (toDoList[i].id === btn.id && btn.checked === true) {
             toDoList[i].completed = true;
-            console.log("first loop")
-            console.log(btn.id);
         } else {
             toDoList[i].completed = false;
-            console.log("second loop")
-            console.log(btn.id);
         }
         console.log(toDoList);
     }
@@ -62,7 +59,7 @@ function getToDos() {
 
 function addToDoToHTML(item) {
     var todoContainer = document.getElementById("todo");
-    todoContainer.insertAdjacentHTML('beforeend', '<p><input type="checkbox" class="box" onclick="validate(this)" id="' + item.id +  '"> ' + item.text + '</p>');
+    todoContainer.insertAdjacentHTML('beforeend', '<p><input type="checkbox" class="box" onclick="checkIfCompleted(this)" id="' + item.id +  '"> ' + item.text + '</p>');
 }
 
 function loopThroughAllTodos() {
