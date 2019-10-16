@@ -31,6 +31,7 @@ function checkIfCompleted(btn) {
         console.log(toDoList);
     }
 }
+
 function addNewTodo() {
     var input = getInputValue();
     var newToDo = new Todo(input);
