@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-//  var endtime = new Date(); 
-//  endtime.setMinutes(endtime.getMinutes() + 1);
  function countdown() {
     var endtime = new Date();
     var timerValue = document.getElementById("input").value;
@@ -19,8 +17,6 @@
         document.getElementById("seconds").innerHTML = result + " s";
     }
 
-    // document.getElementById("seconds").innerHTML = result + " s";
-    // console.log(Math.round(result));
     }, 1000);
    
 }
