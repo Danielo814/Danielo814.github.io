@@ -1,3 +1,11 @@
+class Todo {
+    constructor (info) {
+        this.text = info.text;
+        this.completed = info.completed || false;
+        this.id = info.id || Math.random().toString(36).substring(7);
+    }
+}
+
 var toDoList = getToDos() || [];
 
 
@@ -9,17 +17,14 @@ function createItem() {
     console.log(toDoList);
    }
 
-class Todo {
-    constructor (text, completed, id) {
-        this.text = text;
-        this.completed = completed || false;
-        this.id = id || Math.random().toString(36).substring(7);
-    }
 
-}
+// function checkIfCompleted(event) {
+//     var thisElement = event.target;
+//     var currentTodo = new Todo(thisElement);
+//     currentTodo.toggleDone();
+// }
 
-
-function checkIfCompleted(btn) {
+function checkIfCompleted(event, btn) {
       for (i = 0; i < toDoList.length; i++) {
         if (btn.id != toDoList[i].id) {
             continue;
@@ -30,16 +35,21 @@ function checkIfCompleted(btn) {
         }
         console.log(toDoList);
     }
+    event.stopPropagation();
 }
 
 function addNewTodo() {
     var input = getInputValue();
-    var newToDo = new Todo(input);
+    var newToDo = new Todo({text: input});
     return newToDo;
 }
 
 function updateTodoList(newItem) {
     toDoList.push(newItem);
+}
+
+function debug(event) {
+    // checkIfCompleted(event);
 }
 
 function getInputValue() {
@@ -55,12 +65,17 @@ function saveTodosLocally() {
 function getToDos() {
     var t = localStorage.getItem("todos");
     var j = JSON.parse(t);
+    if (j) {
+       for (var i = 0; i < j.length; i++) {
+            j[i] = new Todo(j[i]);
+        }
+    }
     return j;
 }
 
 function addToDoToHTML(item) {
     var todoContainer = document.getElementById("todo");
-    todoContainer.insertAdjacentHTML('beforeend', '<p><input type="checkbox" class="box" onclick="checkIfCompleted(this)" id="' + item.id +  '"> ' + item.text + '</p>');
+    todoContainer.insertAdjacentHTML('beforeend', '<p onclick="debug(event)"><input type="checkbox" class="box" onclick="checkIfCompleted(event, this)" id="' + item.id +  '"> ' + item.text + '</p>');
 }
 
 function loopThroughAllTodos() {
