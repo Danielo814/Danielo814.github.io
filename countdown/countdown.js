@@ -1,15 +1,34 @@
 #!/usr/bin/env node
-function countDown() {
+
+function getValue() {
     var timerValue = Number(document.getElementById("input").value);
-    var myInterval = setInterval(update, 1000);
-    function update() {
-        timerValue--;
-        if (timerValue < 0) {
-            clearInterval(myInterval)
-        } else{
-            document.getElementById("seconds").innerHTML = timerValue + " s";
-        }
+    return timerValue;
+    // var myInterval = setInterval(update, 1000, timerValue);
+}
+
+function startInterval() {
+    var countdownInterval = setInterval(countDown, 1000, getValue());
+}
+
+function countDown(timerValue) {
+    startInterval()
+    timerValue--;
+    if (timerValue < 0) {
+        clearInterval(myInterval)
+    } else{
+        document.getElementById("seconds").innerHTML = lol + " s";
     }
+    // var timerValue = Number(document.getElementById("input").value);
+    // var myInterval = setInterval(update, 1000);
+    // startInterval();
+    // function update() {
+    //     timerValue--;
+    //     if (timerValue < 0) {
+    //         clearInterval(myInterval)
+    //     } else{
+    //        document.getElementById("seconds").innerHTML = timerValue + " s";
+    //     }
+    // }
 }
 
 //  function countdown() {
