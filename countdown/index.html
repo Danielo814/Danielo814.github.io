@@ -5,9 +5,12 @@
         <link rel="stylesheet" type="text/css" href="style.css"/>
     </head>
     <body>
-        <input id="input">
-        <button onclick="countDown()">Start</button>
-        <p id="seconds"></p>
+        <input id="hours"> hours
+        <input id ="minutes" placeholder="25"> minutes
+        <input id="seconds" placeholder="0"> seconds
+        <button onclick="manageInterval()">Start</button>
+        <button onclick="pauseInterval()">Pause</button>
+        <p id="time"></p>
         <script src="countdown.js"></script>
     </body>
 </html>
