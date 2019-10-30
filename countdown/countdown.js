@@ -1,53 +1,50 @@
-#!/usr/bin/env node
+var paused = false; 
 
-function getValue() {
-    var timerValue = Number(document.getElementById("input").value);
-    return timerValue;
-    // var myInterval = setInterval(update, 1000, timerValue);
+function getSeconds() {
+    hours = Number(document.getElementById("hours").value);
+    minutes = Number(document.getElementById("minutes").value);
+    seconds = Number(document.getElementById("seconds").value);
+    return ((hours * 60 * 60) + (minutes * 60) + seconds); 
 }
 
-function startInterval() {
-    var countdownInterval = setInterval(countDown, 1000, getValue());
+function pauseInterval() {
+    window.timerValue = timerValue;
+    window.paused = true;
+    clearInterval(countdownInterval);
 }
 
-function countDown(timerValue) {
-    startInterval()
-    timerValue--;
-    if (timerValue < 0) {
-        clearInterval(myInterval)
-    } else{
-        document.getElementById("seconds").innerHTML = lol + " s";
+function manageInterval() {
+    if (!window.paused) {
+        window.timerValue = getSeconds() || 1500;
     }
-    // var timerValue = Number(document.getElementById("input").value);
-    // var myInterval = setInterval(update, 1000);
-    // startInterval();
-    // function update() {
-    //     timerValue--;
-    //     if (timerValue < 0) {
-    //         clearInterval(myInterval)
-    //     } else{
-    //        document.getElementById("seconds").innerHTML = timerValue + " s";
-    //     }
-    // }
+    window.countdownInterval = setInterval(function() {
+        if (timerValue < 0) {
+            clearInterval(countdownInterval);
+        } else{
+            setElements();
+        }
+    }, 1000);
 }
 
-//  function countdown() {
-//     var endtime = new Date();
-//     var timerValue = document.getElementById("input").value;
-//     endtime.setMinutes(endtime.getMinutes() + Number(timerValue));
+function setTimeFormat() {
+    timeUnits = setValues();
+    if (timerValue > 3600) {
+        return [timeUnits.hours + " hours  " , timeUnits.minutes + " minutes  ", timeUnits.seconds % 100 + " seconds"].join("");
+    } else {
+        return [timeUnits.minutes + " minutes  ", timeUnits.seconds % 100 + " seconds"].join("");
+    }
 
-//     var myVar = setInterval(function() {
-//     var starttime = new Date();
+}
 
-//     let result = Math.round((endtime.getTime() - starttime.getTime()) / 1000);
-//     console.log(result);
+function setElements() {
+    return document.getElementById("time").innerHTML = setTimeFormat();
+}
 
-//     if (result <= 0) {
-//         clearInterval(myVar);
-//     } else {
-//         document.getElementById("seconds").innerHTML = result + " s";
-//     }
-
-//     }, 1000);
-   
-// }
+function setValues() {
+    timerValue--;
+    return {
+        hours: Math.floor(timerValue / 60 / 60), 
+        minutes: Math.floor((timerValue / 60) % 60), 
+        seconds: Math.floor((timerValue - (Math.floor((timerValue / 60) % 60)) * 60))
+    };
+}
