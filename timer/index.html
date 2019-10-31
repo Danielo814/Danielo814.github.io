@@ -8,8 +8,10 @@
         <input id="hours"> hours
         <input id ="minutes" placeholder="25"> minutes
         <input id="seconds" placeholder="0"> seconds
-        <button id="start" onclick="manageInterval()">Start</button>
-        <button onclick="pauseInterval()">Pause</button>
+        <button class="timer-button" id="startButton" onclick="startHandler()">Start</button>
+        <button class="timer-button hide" id="pauseButton" onclick="pauseHandler()">Pause</button>
+        <button class="timer-button hide" id="resumeButton" onclick="resumeHandler()">Resume</button>
+        <button class="timer-button hide" id="resetButton" onclick="resetHandler()">Reset</button>
         <p id="time"></p>
         <script src="countdown.js"></script>
     </body>
