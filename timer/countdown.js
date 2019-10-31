@@ -66,8 +66,6 @@ function startHandler() {
     resetButton.classList.remove("hide");
     pauseButton.classList.remove("hide");
     startButton.classList.add("hide");
-
-    console.log("start was clicked");
     startCountdown();
 }
 
@@ -77,7 +75,6 @@ function pauseHandler() {
     pauseButton.classList.add("hide");
     resumeButton.classList.remove("hide");
     pauseCountdown();
-    console.log("pause was clicked");
 }
 
 function resumeHandler() {
@@ -86,12 +83,10 @@ function resumeHandler() {
     resumeButton.classList.add("hide");
     pauseButton.classList.remove("hide");
     startCountdown();
-    console.log("resume was clicked");
 }
 
 function resetHandler() {
     var resetButton = document.querySelector("#resetButton");
     resetButton.classList.remove("hide");
     resetCountdown();
-    console.log("reset was clicked");
 }
