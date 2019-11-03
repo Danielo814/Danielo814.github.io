@@ -4,4 +4,12 @@ This is the repository containing my resume all the personal projects I have wor
 
 -------------
 
-My resume is hosted at [danielojeda.com/resume](http://danielojeda.com/resume)
+## Resume
+
+You can view my resume at [danielojeda.com/resume](http://danielojeda.com/resume)
+
+---------------
+
+## Projects
+
+You can view a list of projects I have worked on at [danielojeda.com/projects](http://danielojeda.com/projects)
