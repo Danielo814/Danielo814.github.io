@@ -1,3 +1,3 @@
-# [Personal Website](danielojeda.com)
+# [Personal Website](http://danielojeda.com)
 
 This is the repository containing all the personal projects I have worked on, you can 
