@@ -16,3 +16,9 @@ You can view a list of projects I have worked on at [danielojeda.com/projects](h
 
 
 [Temperature Converter](http://danielojeda.com/converter) - This is a temperature converter I created in javascript, it converts from celcius to fahrenheit, or from fahrenheit to celcius. It will convert automatically once it detects an 'f' for fahrenheit or a 'c' for celcius in the input box.
+
+
+[Reminders](http://danielojeda.com/reminders) - A javascript reminders app that creates a list of elements that are incomplete tasks for a user. User has the option to select and deselect elements to denote whether or not an item has been completed.
+
+
+
