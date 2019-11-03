@@ -21,4 +21,7 @@ You can view a list of projects I have worked on at [danielojeda.com/projects](h
 [Reminders](http://danielojeda.com/reminders) - A javascript reminders app that creates a list of elements that are incomplete tasks for a user. User has the option to select and deselect elements to denote whether or not an item has been completed.
 
 
+[Timer](http://danielojeda.com/timer) - This is a timer implemented in javascipt. Values can be entered in any or all of the three input boxes that specify the number of hours, minutes, and seconds to count down from. There is functionality to pause, resume, and reset the timer as well.
+
+
 
