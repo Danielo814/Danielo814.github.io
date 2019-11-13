@@ -28,3 +28,59 @@ textarea {
   color: #755139ff;
   overflow: visible;
 }
+
+/* #title {
+  border: none;
+  background-color: #f2edd7ff;
+  font-size: 18px;
+  outline: none;
+  padding-top: 15px;
+} */
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #f2edd7ff;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+  background-color: #f2edd7ff;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  margin-top: 10px;
+}
+
+div {
+  text-align: center;
+}
+
+button {
+  display: none;
+}
+
+i {
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
