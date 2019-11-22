@@ -1,15 +1,19 @@
 .reminders-container {
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: auto;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
 }
 
 #input {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 hr {
-    width: 100%;
-  }
+  width: 100%;
+}
+
+p {
+  margin-left: 15px;
+}
