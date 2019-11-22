@@ -4,10 +4,18 @@
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  border: 2px solid grey;
+  border-radius: 15px;
 }
 
 #input {
-  margin-left: 15px;
+  margin-left: 3px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+}
+
+button {
+  margin-left: 3px;
 }
 
 hr {
@@ -15,5 +23,17 @@ hr {
 }
 
 p {
+  margin-left: 15px;
+}
+
+#todo {
+  padding-bottom: 52px;
+}
+
+* {
+  font-family: "Barlow", sans-serif;
+}
+
+h1 {
   margin-left: 15px;
 }
