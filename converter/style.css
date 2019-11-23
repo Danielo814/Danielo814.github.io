@@ -1,54 +1,63 @@
 #output {
-    width: 100px;
-    height: 30px;
-    border-style: solid;
-    border-width: thin;
-    text-align: center;
-    margin-left: 40px;
+  width: 100px;
+  height: 30px;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  margin-left: 40px;
 }
 
 body {
-    margin: 0 auto;
-    max-width: 50em;
-    font-family: "Helvetica", "Arial", sans-serif;
-    line-height: 1.5;
-    padding: 4em 1em;
-    color: #555;
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.5;
+  padding: 4em 1em;
+  color: #555;
 }
 
-h1, h2, strong {
-    color: #333;
-    text-align: center;
+h1,
+h2,
+strong {
+  color: #333;
+  text-align: center;
 }
 
-code, pre {
-    background: #eee;
+code,
+pre {
+  background: #eee;
 }
 
 code {
-    padding: 2px 4px;
-    vertical-align: text-bottom;
+  padding: 2px 4px;
+  vertical-align: text-bottom;
 }
 
 pre {
-    padding: 1em;
+  padding: 1em;
 }
 
 #input {
-    width: 100px;
-    height: 30px;
-    margin-right: 5px;
-    font-family: "Helvetica", "Arial", sans-serif;
-    text-align: center;
+  width: 100px;
+  height: 30px;
+  margin-right: 5px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  text-align: center;
 }
 
 .fields {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 p {
-    text-align: center;
+  text-align: center;
+}
+
+#tool-container {
+  padding: 15px;
+  border: 1px solid gray;
+  border-radius: 15px;
 }
