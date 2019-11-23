@@ -10,7 +10,8 @@
 body {
   margin: 0 auto;
   max-width: 50em;
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: "Rokkitt", serif;
+  font-size: 22px;
   line-height: 1.5;
   padding: 4em 1em;
   color: #555;
@@ -60,4 +61,5 @@ p {
   padding: 15px;
   border: 1px solid gray;
   border-radius: 15px;
+  padding-bottom: 37px;
 }
