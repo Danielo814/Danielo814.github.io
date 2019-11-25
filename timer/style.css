@@ -1,7 +1,19 @@
 input {
-    text-align: center;
+  text-align: center;
 }
 
 .hide {
-    display: none;
+  display: none;
+}
+
+#set-time {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.timer-input {
+  padding: 5px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
