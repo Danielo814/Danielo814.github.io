@@ -17,3 +17,13 @@ input {
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
+
+p {
+  text-align: center;
+  padding-top: 88px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
