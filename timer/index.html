@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Timer</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
-    </head>
-    <body>
-        <input id="hours"> hours
-        <input id ="minutes" placeholder="25"> minutes
-        <input id="seconds" placeholder="0"> seconds
-        <button class="timer-button" id="startButton" onclick="startHandler()">Start</button>
-        <button class="timer-button hide" id="pauseButton" onclick="pauseHandler()">Pause</button>
-        <button class="timer-button hide" id="resumeButton" onclick="resumeHandler()">Resume</button>
-        <button class="timer-button hide" id="resetButton" onclick="resetHandler()">Reset</button>
-        <p id="time"></p>
-        <script src="countdown.js"></script>
-    </body>
+  <head>
+    <title>Timer</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="set-time">
+      <input class="timer-input" id="hours" placeholder="Hours" />
+      <input class="timer-input" id="minutes" placeholder="Minutes" />
+      <input class="timer-input" id="seconds" placeholder="Seconds" />
+      <button class="timer-button" id="startButton" onclick="startHandler()">
+        Start
+      </button>
+      <button
+        class="timer-button hide"
+        id="pauseButton"
+        onclick="pauseHandler()"
+      >
+        Pause
+      </button>
+      <button
+        class="timer-button hide"
+        id="resumeButton"
+        onclick="resumeHandler()"
+      >
+        Resume
+      </button>
+      <button
+        class="timer-button hide"
+        id="resetButton"
+        onclick="resetHandler()"
+      >
+        Reset
+      </button>
+    </div>
+    <p id="time"></p>
+    <script src="countdown.js"></script>
+  </body>
 </html>
