@@ -2,7 +2,7 @@
   "name": "site_makover",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.danielojeda.com",
+  "homepage": "http://danielo814.github.io/site_makeover",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
